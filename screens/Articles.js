@@ -12,6 +12,7 @@ import { Block, Text, theme } from "galio-framework";
 //argon
 import { articles, Images, argonTheme } from "../constants/";
 import { Card } from "../components/";
+import * as firebase from "firebase";
 
 const { width } = Dimensions.get("screen");
 

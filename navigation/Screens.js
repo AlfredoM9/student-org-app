@@ -10,11 +10,12 @@ import { Block } from "galio-framework";
 // screens
 import Home from "../screens/Home";
 import Onboarding from "../screens/Onboarding";
-import Pro from "../screens/Pro";
 import Profile from "../screens/Profile";
 import Register from "../screens/Register";
 import Elements from "../screens/Elements";
 import Articles from "../screens/Articles";
+import CreateEvent from "../screens/CreateEvent";
+
 // drawer
 import CustomDrawerContent from "./Menu";
 
@@ -41,23 +42,6 @@ function ElementsStack(props) {
           cardStyle: { backgroundColor: "#F8F9FE" }
         }}
       />
-            <Stack.Screen
-        name="Pro"
-        component={Pro}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              title=""
-              back
-              white
-              transparent
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
     </Stack.Navigator>
   );
 }
@@ -73,23 +57,6 @@ function ArticlesStack(props) {
             <Header title="Articles" navigation={navigation} scene={scene} />
           ),
           cardStyle: { backgroundColor: "#F8F9FE" }
-        }}
-      />
-            <Stack.Screen
-        name="Pro"
-        component={Pro}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              title=""
-              back
-              white
-              transparent
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
         }}
       />
     </Stack.Navigator>
@@ -116,23 +83,6 @@ function ProfileStack(props) {
           headerTransparent: true
         }}
       />
-            <Stack.Screen
-        name="Pro"
-        component={Pro}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              title=""
-              back
-              white
-              transparent
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
     </Stack.Navigator>
   );
 }
@@ -156,27 +106,32 @@ function HomeStack(props) {
           cardStyle: { backgroundColor: "#F8F9FE" }
         }}
       />
-      <Stack.Screen
-        name="Pro"
-        component={Pro}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              title=""
-              back
-              white
-              transparent
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
     </Stack.Navigator>
   );
 }
 
+function CreateEventStack(props){
+    return(
+        <Stack.Navigator mode="card" headerMode="screen">
+            <Stack.Screen
+                name="Create Event"
+                component={CreateEvent}
+                options={{
+                    header: ({navigation, scene}) => (
+                        <Header
+                            title="Create Event"
+                            navigation={navigation}
+                            scene={scene}
+                        />
+                    ),
+                    cardStyle: { backgroundColor: "#F8F9FE" }
+                }}
+            />
+        </Stack.Navigator>
+    )
+}
+
+/*
 export default function OnboardingStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="none">
@@ -192,7 +147,9 @@ export default function OnboardingStack(props) {
   );
 }
 
-function AppStack(props) {
+
+ */
+export default function AppStack(props) {
   return (
     <Drawer.Navigator
       style={{ flex: 1 }}
@@ -221,13 +178,14 @@ function AppStack(props) {
           fontWeight: "normal"
         }
       }}
-      initialRouteName="Home"
+      initialRouteName="Account"
     >
       <Drawer.Screen name="Home" component={HomeStack} />
       <Drawer.Screen name="Profile" component={ProfileStack} />
       <Drawer.Screen name="Account" component={Register} />
       <Drawer.Screen name="Elements" component={ElementsStack} />
       <Drawer.Screen name="Articles" component={ArticlesStack} />
+      <Drawer.Screen name="Create Event" component={CreateEventStack} />
     </Drawer.Navigator>
   );
 }

@@ -4,6 +4,15 @@ import { AppLoading } from "expo";
 import { Asset } from "expo-asset";
 import { Block, GalioProvider } from "galio-framework";
 import { NavigationContainer } from "@react-navigation/native";
+import { decode, encode } from "base-64";
+
+if (!global.btoa) {
+  global.btoa = encode;
+}
+
+if (!global.atob) {
+  global.atob = decode;
+}
 
 // Before rendering any navigation stack
 import { enableScreens } from "react-native-screens";

@@ -4,6 +4,7 @@ import { Block, Text, theme } from "galio-framework";
 
 import Icon from "./Icon";
 import argonTheme from "../constants/Theme";
+import { Ionicons } from '@expo/vector-icons';
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
@@ -54,6 +55,10 @@ class DrawerItem extends React.Component {
             size={14}
             color={focused ? "white" : argonTheme.COLORS.INFO}
           />
+        );
+      case "Create Event":
+        return (
+            <Ionicons name="ios-create" size={24} color="green" />
         );
       case "Getting Started":
         return (<Icon

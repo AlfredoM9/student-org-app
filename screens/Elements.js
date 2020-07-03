@@ -439,9 +439,12 @@ const styles = StyleSheet.create({
   inputDefault: {
     borderBottomColor: argonTheme.COLORS.PLACEHOLDER
   },
+  /*
   inputTheme: {
     borderBottomColor: argonTheme.COLORS.PRIMARY
   },
+
+   */
   inputTheme: {
     borderBottomColor: argonTheme.COLORS.PRIMARY
   },
