@@ -21,15 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4d0ca70-c8d2-4fdf-812a-a70dc7dc302b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DrawerItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DrawerItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/Screens.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/Screens.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Elements.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Elements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Pro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/CreateEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateEvent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +86,11 @@
       <workItem from="1593275721486" duration="3484000" />
       <workItem from="1593280169144" duration="676000" />
       <workItem from="1593390805176" duration="6680000" />
-      <workItem from="1593442489254" duration="3027000" />
+      <workItem from="1593442489254" duration="4932000" />
+      <workItem from="1593459134455" duration="45000" />
+      <workItem from="1593668096735" duration="740000" />
+      <workItem from="1593729527406" duration="3725000" />
+      <workItem from="1593807599833" duration="923000" />
     </task>
     <servers />
   </component>
@@ -122,18 +118,19 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="515" y="287" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.864@0.0.1536.864" timestamp="1590540807373" />
-    <state x="933" y="187" key="FileChooserDialogImpl" timestamp="1593391358490">
+    <state x="933" y="187" key="FileChooserDialogImpl" timestamp="1593448481841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="933" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1360.768@0.0.1536.864" timestamp="1593391358490" />
+    <state x="933" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1360.768@0.0.1536.864" timestamp="1593448481841" />
     <state x="933" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1591307959410" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1591399492555">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1591399492555" />
-    <state x="22" y="8" width="759" height="507" key="dock-window-1" timestamp="1590714913578">
+    <state x="198" y="90" width="1376" height="546" maximized="true" key="dock-window-1" timestamp="1593733071449">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="198" y="90" width="1376" height="546" maximized="true" key="dock-window-1/0.0.1536.864/1920.0.1360.768@0.0.1536.864" timestamp="1593733071449" />
     <state x="22" y="8" width="759" height="507" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1590714913578" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1591223989457">
       <screen x="0" y="0" width="1536" height="864" />

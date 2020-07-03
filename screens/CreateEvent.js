@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Modal, View, TextInput, Dimensions, TouchableWithoutFeedback, Platform, ScrollView} from "react-native";
+import {StyleSheet, Modal, View, TextInput, Dimensions, TouchableWithoutFeedback, Platform, ScrollView, Picker} from "react-native";
 import {Button, Input, Switch} from "../components";
 import {Block, theme, Text} from "galio-framework";
 import {argonTheme} from "../constants";
@@ -10,10 +10,11 @@ import * as yup from 'yup';
 import FirebaseConfig from "../Firebase/firebaseConfig";
 import * as firebase from "firebase";
 import "firebase/firestore";
+import DropDown from "../components/Select";
 
 //Initialize Firebase
-firebase.initializeApp(FirebaseConfig);
-const db = firebase.firestore();
+// firebase.initializeApp(FirebaseConfig);
+// const db = firebase.firestore();
 
 const { width } = Dimensions.get("screen");
 
@@ -34,6 +35,9 @@ const CreateEvent = ({navigation}) => {
 
     // State for modal when form submitted
     const [modalOpen, setModalOpen] = useState(false)
+
+    // Variable that stores selection from picker
+    const [selectedValue, setSelectedValue] = useState("Java");
 
     // Date and time vars
     const dateOfEvent = date.toDateString();
@@ -93,14 +97,14 @@ const CreateEvent = ({navigation}) => {
             }}
                 validationSchema={reviewSchema}
                 onSubmit={ (values, {setSubmitting, resetForm}) => {
-                    db.collection("Orgs").doc("aZfma8Dqr3PmGcSAVdVd").collection("Events").add({
-                        titleOfEvent: values.titleOfEvent,
-                        dateOfEvent: dateOfEvent,
-                        timeOfEvent: timeOfEvent,
-                        locationOfEvent: values.locationOfEvent,
-                        pointsOfEvent: values.pointsOfEvent,
-                        descriptionOfEvent: values.descriptionOfEvent,
-                    });
+                    // db.collection("Orgs").doc("aZfma8Dqr3PmGcSAVdVd").collection("Events").add({
+                    //     titleOfEvent: values.titleOfEvent,
+                    //     dateOfEvent: dateOfEvent,
+                    //     timeOfEvent: timeOfEvent,
+                    //     locationOfEvent: values.locationOfEvent,
+                    //     pointsOfEvent: values.pointsOfEvent,
+                    //     descriptionOfEvent: values.descriptionOfEvent,
+                    // });
                     setModalOpen(true);
                     resetForm();
                     setDate(new Date());
@@ -108,6 +112,22 @@ const CreateEvent = ({navigation}) => {
             }}
             >
                 {(props) => <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+                    {/*** Select Organization **/}
+                    <Text
+                        size={20}
+                        style={styles.title}
+                        color={argonTheme.COLORS.PRIMARY}
+                    >
+                        Select the Organization
+                    </Text>
+                    <Block style={{borderColor: argonTheme.COLORS.INFO, borderRadius: 4,
+                                    borderWidth: 1, backgroundColor: '#FFF'}}>
+                        <Picker>
+                            <Picker.Item style={{padding: 10}} label="Java" value="java" />
+                            <Picker.Item style={{padding: 10}} label="JavaScript" value="js" />
+                        </Picker>
+                    </Block>
+
                     {/*** Title of Event ***/}
                     <Text
                         size={20}
